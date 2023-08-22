@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100&family=Poppins:wght@100&family=Roboto:wght@100&display=swap');
+
+body {
+    background-color: antiquewhite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.list img {
+    height: 40px;
+    width: 40px;
+    margin: 5px;
+    border: 1px solid rgb(239, 144, 144);
+    border-radius: 33px;
+
+
+}
+
+nav {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    /* to give horizontal flexing*/
+    align-items: center;
+    list-style-type: none;
+    height: 60px;
+    background-color: black;
+    color: white;
+
+}
+
+nav ul li {
+    padding: 0 12px;
+}
+
+.list {
+    display: flex;
+    /* to give horizontal flexing*/
+    align-items: center;
+    font-weight: bolder;
+    font-size: 1.3rem;
+
+}
+
+.container {
+    min-height: 66vh;
+    /* 75vh==75% of the height*/
+    color: white;
+    font-family: 'Roboto', sans-serif;
+
+    display: flex;
+    margin: 20px auto;
+    width: 70%;
+    border-radius: 12px;
+    padding: 10px;
+
+    background-image: url(music-and_covers/bgi.png);
+    background-size: 100%;
+}
+.container h1{
+    font-size: 15px;
+    color: darkgrey;
+    font-weight: bold;
+}
+
+.bottom {
+    position: sticky; /*stick to its place*/
+    height: 90px;
+    background-color: rgb(10, 8, 8);
+    color: white;
+    bottom: 0;
+    /* to center progressbar coz this is content so make justify content center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* to give up down play and progressbar */
+}
+
+.icons {
+    margin-top: 7px;
+}
+
+.icons i {
+    margin: 2px;
+    cursor: pointer;
+}
+
+#myProgressBar {
+    width: 70vw;
+    cursor: pointer;
+}
+
+.songItem{
+    height: 50px;
+    display: flex;
+    background-color: darkgray;
+    color: black;
+    border-radius: 20px;
+    margin: 20px 0;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: bold;
+}
+.songItem img{
+    height: 30px;
+    width: 50px;
+    margin: 10px 8px;
+    border-radius: 10px;
+}
+.timeStamp{
+    margin: 0 12px;
+}
+.timeStamp i{
+cursor: pointer;
+}
+.songItemContainer{
+    margin-top: 30px;
+}
+.songInfo{
+    position: absolute;
+    left: 15vw;
+}
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.3s ease-in;
+
+}
+@media screen and (max-width:860px) {
+   .songInfo{ position: absolute;
+    bottom: 0px;
+   }
+}
+@media screen and (max-width:726px) {
+    .icons .fa-3x {
+        font-size: 2em;
+    }
+}
